@@ -23,7 +23,8 @@ class Response
      */
     public function isSuccessful()
     {
-        return $this->getStatusType() == 'success';
+        $statusType = $this->getStatusType();
+        return ($statusType == 'success') || ($statusType == 'notify');
     }
 
     /**
