@@ -35,6 +35,7 @@ class DomainCreate implements Task
 			'zonec',
 
 			'nserver',
+			'nsentry',
 			'dnssec',
 			'zone'
 		);
