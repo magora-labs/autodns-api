@@ -74,7 +74,7 @@ class Request
         }
 
         if ($this->ctid) {
-            $request['ctid'] = $this->ctid;
+            $request['task']['ctid'] = $this->ctid;
         }
 
         return $request;
