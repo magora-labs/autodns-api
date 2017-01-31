@@ -15,6 +15,11 @@ Design goals
 
 Usage
 -----
+### Load classes
+``` php
+$loader = require(__DIR__ . '/vendor/autoload.php');
+$loader->add('Autodns', __DIR__ . '/src/Autodns');
+```
 
 ### ApiClient
 
