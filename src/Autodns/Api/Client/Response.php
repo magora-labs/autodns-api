@@ -55,6 +55,18 @@ class Response
     }
 
     /**
+     * @return string
+     */
+    public function getServerTransactionId()
+    {
+        if ( isset($this->payload['stid']) ) {
+            return $this->payload['stid'];
+        }
+
+        return false;
+    }
+
+    /**
      * @return array
      */
     public function getPayload()
