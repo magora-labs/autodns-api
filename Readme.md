@@ -1,9 +1,10 @@
 Autodns-API
 ===========
 
-A full-featured implementation of the [AutoDNS-XML-API](http://www.internetx.com/en/software/autodns/xml-api.html).
+A (not yet) full-featured implementation of the [AutoDNS-XML-API](http://www.internetx.com/en/software/autodns/xml-api.html).
 
-[![Build Status](https://secure.travis-ci.org/tillkahlbrock/autodns-api.png?branch=master)](http://travis-ci.org/tillkahlbrock/autodns-api)
+[![Build Status](https://secure.travis-ci.org/rhurling/autodns-api.png?branch=master)](http://travis-ci.org/rhurling/autodns-api)
+[![Coverage Status](https://coveralls.io/repos/rhurling/autodns-api/badge.png)](https://coveralls.io/r/rhurling/autodns-api)
 
 Design goals
 ------------
@@ -14,6 +15,11 @@ Design goals
 
 Usage
 -----
+### Load classes
+``` php
+$loader = require(__DIR__ . '/vendor/autoload.php');
+$loader->add('Autodns', __DIR__ . '/src/Autodns');
+```
 
 ### ApiClient
 
@@ -22,7 +28,7 @@ use Autodns\Api\Account\Info;
 use Autodns\Api\Client\Factory;
 
 $accountInfo = new Info(
-    'https://api.autodns.com',
+    'https://gateway.autodns.com',
     'username',
     'password',
     15
@@ -35,7 +41,7 @@ $client = Factory::create($accountInfo);
 
 ``` php
 use Autodns\Api\Client\Request\Task\Query;
-use Autodns\Api\Client\Request\TaskBuilder\DomainInquireList;
+use Autodns\Api\Client\Request\Task\DomainInquireList;
 
 $query = new Query();
 $query = $query->addOr(
@@ -78,7 +84,7 @@ Autodns tasks
  * Domain Renew (0101003)
  * Domain Ownerchange (0104010)
  * Domain Delete (0103)
- * Domain Inquire (0105)
+ * ~~Domain Inquire (0105)~~
  * ~~Domain Inquire List (0105)~~
  * Domain Status (0102002)
  * Domain Status List (0102002)
@@ -129,7 +135,7 @@ Autodns tasks
 
 ### Handle
 
- * Handle Create (0301)
+ * ~~Handle Create (0301)~~
  * Handle Update (0302)
  * Handle Delete (0303)
  * Handle Inquire (0304)

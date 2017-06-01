@@ -23,7 +23,8 @@ class Response
      */
     public function isSuccessful()
     {
-        return $this->getStatusType() == 'success';
+        $statusType = $this->getStatusType();
+        return ($statusType == 'success') || ($statusType == 'notify');
     }
 
     /**
@@ -40,6 +41,29 @@ class Response
     public function getStatusType()
     {
         return $this->payload['result']['status']['type'];
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatusReturnObject()
+    {
+        if ( isset($this->payload['result']['status']['object']) ) {
+            return $this->payload['result']['status']['object'];
+        }
+        return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getServerTransactionId()
+    {
+        if ( isset($this->payload['stid']) ) {
+            return $this->payload['stid'];
+        }
+
+        return false;
     }
 
     /**

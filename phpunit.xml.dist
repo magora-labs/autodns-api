@@ -11,4 +11,12 @@
             <directory suffix="Test.php">test</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <blacklist>
+            <file>src/Autodns/Api/Client/Request/Task.php</file>
+            <file>src/Autodns/Api/Client/Request/Task/QueryInterface.php</file>
+            <directory>vendor</directory>
+        </blacklist>
+    </filter>
 </phpunit>

@@ -30,13 +30,18 @@ class Client
         $this->accountInfo = $accountInfo;
     }
 
+    public function setTimeout( $timeout )
+    {
+        $this->delivery->setTimeout( $timeout );
+    }
+
     /**
      * @param Task $task
      * @return Response
      */
-    public function call(Task $task)
+    public function call(Task $task, $replyTo = null, $ctid = null)
     {
-        $request = new Request($task);
+        $request = new Request($task, $replyTo, $ctid);
         $request->setAuth($this->accountInfo->getAuthInfo());
         $url = $this->accountInfo->getUrl();
         $response = $this->delivery->send($url, $request);

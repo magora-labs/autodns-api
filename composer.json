@@ -1,5 +1,5 @@
 {
-    "name": "autodns-api/autodns-api",
+    "name": "ggraf/autodns-api",
     "description": "A full-featured implementation of the AutoDNS-XML-API",
     "keywords": ["autodns-api", "autodns-client"],
     "license": "MIT",
@@ -8,7 +8,7 @@
     },
     "require-dev": {
         "schnipseljagd/testdatabuilder": "dev-master",
-        "phpunit/phpunit": "3.7.*"
+        "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
         "psr-0": { "Autodns": "src" }
