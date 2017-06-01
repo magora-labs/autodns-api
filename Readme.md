@@ -132,6 +132,7 @@ Autodns tasks
  * Zone Import (0204)
  * Zone Delete (0203)
  * Zone Inquire (0205)
+ * Zone Inquire List (0205)
 
 ### Handle
 
