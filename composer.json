@@ -4,7 +4,7 @@
     "keywords": ["autodns-api", "autodns-client"],
     "license": "MIT",
     "require": {
-        "kriswallsmith/buzz": "0.16.*"
+        "kriswallsmith/buzz": "0.15.*"
     },
     "require-dev": {
         "schnipseljagd/testdatabuilder": "dev-master",
