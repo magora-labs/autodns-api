@@ -54,7 +54,7 @@ class DomainTransfer implements Task
 	public function asArray()
 	{
 		$array = array(
-		i	'code' => '0104',
+			'code' => '0104',
 			'domain' => $this->domainData
 		);
 		$array['domain']['confirm_order'] = 1;
