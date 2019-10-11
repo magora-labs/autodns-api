@@ -5,7 +5,7 @@ namespace Autodns\Api\Client\Request\Task;
 
 use Autodns\Api\Client\Request\Task;
 
-class ContactDelete implements Task
+class HandleDelete implements Task
 {
 	private $contactData = array();
 
