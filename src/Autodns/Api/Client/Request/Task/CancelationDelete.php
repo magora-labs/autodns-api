@@ -4,7 +4,7 @@ namespace Autodns\Api\Client\Request\Task;
 
 use Autodns\Api\Client\Request\Task;
 
-class CancelationCreate implements Task
+class CancelationDelete implements Task
 {
     private $cancelationData = [];
 
