@@ -1,5 +1,5 @@
 {
-    "name": "mrmiagi/autodns-api",
+    "name": "magora-labs/autodns-api",
     "description": "A full-featured implementation of the AutoDNS-XML-API",
     "keywords": ["autodns-api", "autodns-client"],
     "license": "MIT",
